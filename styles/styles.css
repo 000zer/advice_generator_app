@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+/* ===================================
+   COLOR VARIABLES
+   =================================== */
+:root {
+  --blue-200: hsl(193, 38%, 86%);
+  --green-300: hsl(150, 100%, 66%);
+  --blue-600: hsl(217, 19%, 38%);
+  --blue-900: hsl(217, 19%, 24%);
+  --blue-950: hsl(218, 23%, 16%);
+ }
+
+/* ===================================
+   BASE STYLES AND RESET
+   =================================== */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0; }
+
+body {
+  box-sizing: border-box;
+  height: 100%;
+  min-height: 100vh;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  color: var(--blue-200);
+  line-height: 1.35;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--blue-950);
+  padding: 0; }
+.container {
+    width: 540px;
+  background-color: var(--blue-900);
+  border-radius: 15px;
+  padding: 48px;
+  text-align: center;
+  box-shadow: 30px 50px 80px 0px rgba(0, 0, 0, 0.1); 
+  position: relative;
+    margin-top: auto;
+}
+.advice-id {
+    color: var(--green-300);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 24px;
+    text-transform: uppercase; }
+.advice-text {
+    letter-spacing: -0.3px;
+    margin-bottom: 40px; }
+.divider {
+    background-image: url('../images/pattern-divider-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 16px;
+    width: 100%;
+
+    margin-bottom: 40px; }
+
+.get-advice {
+    position: absolute;
+    bottom: -32px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--green-300); 
+    border: none;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease; }
+.get-advice:hover {
+    box-shadow: 0px 0px 40px 0px rgba(83, 255, 170, 1);
+}
+.get-advice:active {
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1); }
+.attribution { margin-top: auto;font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+@media (max-width: 560px) {
+    .container {
+        width: 90%;
+        padding: 40px 24px;
+    }
+    .advice-text{
+        font-size: 24px;
+        margin-bottom: 32px;
+    }
+    .divider {
+        margin-bottom: 32px;
+    }
+}
